@@ -1,0 +1,36 @@
+{
+    "name": "iunie",
+    "last": 30,
+    "days": {
+        "1": {
+            "name": "Ziua Copilului Sarbatoare legala",
+            "free": true,
+            "cross": null
+        },
+        "8": {
+            "name": "(\u2020) Pogorarea Sf. Duh Rusalii",
+            "free": true,
+            "cross": "red"
+        },
+        "9": {
+            "name": "(\u2020) Sf. Treime A doua zi Rusalii",
+            "free": true,
+            "cross": "red"
+        },
+        "24": {
+            "name": "(\u2020) Nast. Sf. Proroc Ioan Botezatorului (Sanziene)",
+            "free": false,
+            "cross": "red"
+        },
+        "29": {
+            "name": "(\u2020) Sf. Ap. Petru si Pavel \u2020",
+            "free": true,
+            "cross": "red"
+        },
+        "30": {
+            "name": "\u2020 Soborul Sf. 12 Ap. de la Ramet",
+            "free": false,
+            "cross": "black"
+        }
+    }
+}

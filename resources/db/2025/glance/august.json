@@ -1,0 +1,21 @@
+{
+    "name": "august",
+    "last": 31,
+    "days": {
+        "6": {
+            "name": "(\u2020) Schimbarea la Fata a Domnului",
+            "free": false,
+            "cross": "red"
+        },
+        "15": {
+            "name": "Adormirea Maicii Domnului",
+            "free": true,
+            "cross": "red"
+        },
+        "29": {
+            "name": "(\u2020) Taierea Capului Sf. Prooroc Ioan Botezatorul",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

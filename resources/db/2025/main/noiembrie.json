@@ -1,0 +1,90 @@
+{
+    "month": "noiembrie",
+    "last": 30,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 2,
+            "start_day_index": 6,
+            "days": {}
+        },
+        "2": {
+            "start": 3,
+            "end": 9,
+            "start_day_index": 1,
+            "days": {
+                "8": {
+                    "name": "\u2020) Sf. Arh. Mihail",
+                    "desc": "si Gavriil",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                },
+                "9": {
+                    "name": "\u2020) Sf. Ier. Nectarie",
+                    "desc": "Taumaturgul de la Eghina",
+                    "free": false,
+                    "cross": "blue",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 10,
+            "end": 16,
+            "start_day_index": 1,
+            "days": {
+                "11": {
+                    "name": "\u2020 Sf. M. Mc. Mina",
+                    "desc": "",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "13": {
+                    "name": "\u2020) Sf. Ier. Ioan",
+                    "desc": "Gur\u0103 de Aur",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "14": {
+                    "name": "\u2020 Sf. Ap. Filip",
+                    "desc": "unul dintre cei 12 Apostoli",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "4": {
+            "start": 17,
+            "end": 23,
+            "start_day_index": 1,
+            "days": {
+                "21": {
+                    "name": "(\u2020) Intrarea in Biserica",
+                    "desc": "a Maicii Domnului",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 24,
+            "end": 30,
+            "start_day_index": 1,
+            "days": {
+                "30": {
+                    "name": "\u2020) Sf. Ap. Andrei",
+                    "desc": "Sarbatoare legala",
+                    "free": true,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        }
+    }
+}

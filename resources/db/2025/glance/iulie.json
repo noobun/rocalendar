@@ -1,0 +1,26 @@
+{
+    "name": "iulie",
+    "last": 31,
+    "days": {
+        "5": {
+            "name": "\u2020 Sf. Cuv. Atanasie Atonitul",
+            "free": false,
+            "cross": "black"
+        },
+        "7": {
+            "name": "\u2020) Sf. M. Mc. Chiriachi ",
+            "free": false,
+            "cross": "black"
+        },
+        "20": {
+            "name": "\u2020) Sf. Sl\u0103vitul Prooroc Ilie Tesviteanul",
+            "free": false,
+            "cross": "red"
+        },
+        "27": {
+            "name": "\u2020 Sf. M. Mc. \u0219i T\u0103m\u0103duitor Pantelimon",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "name": "ianuarie",
+    "last": 31,
+    "days": {
+        "1": {
+            "name": "(\u2020) Sf. Ier. Vasile Prima zi a anului",
+            "free": true,
+            "cross": "red"
+        },
+        "2": {
+            "name": "A doua zi de anul nou ",
+            "free": true,
+            "cross": null
+        },
+        "6": {
+            "name": "(\u2020) Boboteaza Botezul Domnului",
+            "free": true,
+            "cross": "red"
+        },
+        "7": {
+            "name": "\u2020 Sf. Ioan Botezatorul Soborul Sfantului Ioan Botezatorul",
+            "free": true,
+            "cross": "red"
+        },
+        "11": {
+            "name": "\u2020 Sf. Cv. Teodosie ",
+            "free": false,
+            "cross": "black"
+        },
+        "17": {
+            "name": "\u2020) Sf. Cv. Antonie cel mare",
+            "free": false,
+            "cross": "black"
+        },
+        "18": {
+            "name": "\u2020 Sf. Ier. Atanasie si Chiril",
+            "free": false,
+            "cross": "black"
+        },
+        "20": {
+            "name": "\u2020) Sf. Cuv. Eftimie cel Mare",
+            "free": false,
+            "cross": "black"
+        },
+        "24": {
+            "name": "Unirea Principatelor Romane",
+            "free": true,
+            "cross": null
+        },
+        "25": {
+            "name": "\u2020) Sf. Ier. Grigorie Teologul",
+            "free": false,
+            "cross": "black"
+        },
+        "27": {
+            "name": "\u2020  Aducerea moa\u0219telor Sf. Ier. Ioan Gur\u0103 de Aur",
+            "free": false,
+            "cross": "black"
+        },
+        "30": {
+            "name": "\u2020) Sf. Trei Ierarhi Vasile, Grigorie si Ioan",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

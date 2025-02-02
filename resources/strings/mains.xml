@@ -1,0 +1,17 @@
+<strings>
+    <string id="AppName">ROcalendar</string>
+
+    <string id="free_day_color_name">Culoare Zi Libera</string>
+    <string id="black_cross_color_name">Culoare Cruce Neagra</string>
+    <string id="red_cross_color_name">Culoare Cruce Rosie</string>
+
+    <string id="verde_color">verde</string>
+    <string id="alb_color">alb</string>
+    <string id="rosu_color">rosu</string>
+    <string id="albastru_color">albastru</string>
+    <string id="galben_color">galben</string>
+
+    <string id="month">Ianuarie</string>
+    <string id="year">2025</string>
+    <string id="title">Overview</string>
+</strings>

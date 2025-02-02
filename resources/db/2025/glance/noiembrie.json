@@ -1,0 +1,41 @@
+{
+    "name": "noiembrie",
+    "last": 30,
+    "days": {
+        "8": {
+            "name": "\u2020) Sf. Arh. Mihail si Gavriil",
+            "free": false,
+            "cross": "red"
+        },
+        "9": {
+            "name": "\u2020) Sf. Ier. Nectarie Taumaturgul de la Eghina",
+            "free": false,
+            "cross": "blue"
+        },
+        "11": {
+            "name": "\u2020 Sf. M. Mc. Mina ",
+            "free": false,
+            "cross": "black"
+        },
+        "13": {
+            "name": "\u2020) Sf. Ier. Ioan Gur\u0103 de Aur",
+            "free": false,
+            "cross": "black"
+        },
+        "14": {
+            "name": "\u2020 Sf. Ap. Filip unul dintre cei 12 Apostoli",
+            "free": false,
+            "cross": "black"
+        },
+        "21": {
+            "name": "(\u2020) Intrarea in Biserica a Maicii Domnului",
+            "free": false,
+            "cross": "red"
+        },
+        "30": {
+            "name": "\u2020) Sf. Ap. Andrei Sarbatoare legala",
+            "free": true,
+            "cross": "red"
+        }
+    }
+}

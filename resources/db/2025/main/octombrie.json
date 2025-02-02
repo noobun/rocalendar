@@ -1,0 +1,69 @@
+{
+    "month": "octombrie",
+    "last": 31,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 5,
+            "start_day_index": 3,
+            "days": {
+                "1": {
+                    "name": "(\u2020) Acoperamantul Maicii",
+                    "desc": "Domnului",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "2": {
+            "start": 6,
+            "end": 12,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "3": {
+            "start": 13,
+            "end": 19,
+            "start_day_index": 1,
+            "days": {
+                "14": {
+                    "name": "\u2020) Sf. Cv. Parascheva",
+                    "desc": "de la Iasi",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "4": {
+            "start": 20,
+            "end": 26,
+            "start_day_index": 1,
+            "days": {
+                "26": {
+                    "name": "\u2020) Sf. M. Mc. Dimitrie",
+                    "desc": "Izvoratorul de mir",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 27,
+            "end": 31,
+            "start_day_index": 1,
+            "days": {
+                "27": {
+                    "name": "\u2020) Sf. Cuv. Dimitrie ",
+                    "desc": "cel Nou Ocrotitorul Bucurestilor",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        }
+    }
+}

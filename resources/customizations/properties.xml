@@ -1,0 +1,12 @@
+<properties>
+    <property id="appVersion" type="string">0.3.5</property>
+    <property id="logging" type="number">1</property>
+    <!-- 
+        //1     -> Errors
+        //10    -> Info
+        //100   -> Debug 
+    -->
+    <property id="free_day_color" type="number">0x00ff60</property>
+    <property id="black_cross_color" type="number">0xffffff</property>
+    <property id="red_cross_color" type="number">0xff0000</property>
+</properties>

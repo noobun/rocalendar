@@ -1,0 +1,126 @@
+{
+    "month": "ianuarie",
+    "last": 31,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 5,
+            "start_day_index": 3,
+            "days": {
+                "1": {
+                    "name": "(\u2020) Sf. Ier. Vasile",
+                    "desc": "Prima zi a anului",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                },
+                "2": {
+                    "name": "A doua zi de anul nou",
+                    "desc": "",
+                    "free": true,
+                    "cross": null,
+                    "chime": false
+                }
+            }
+        },
+        "2": {
+            "start": 6,
+            "end": 12,
+            "start_day_index": 1,
+            "days": {
+                "6": {
+                    "name": "(\u2020) Boboteaza",
+                    "desc": "Botezul Domnului",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                },
+                "7": {
+                    "name": "\u2020 Sf. Ioan Botezatorul",
+                    "desc": "Soborul Sfantului Ioan Botezatorul",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                },
+                "11": {
+                    "name": "\u2020 Sf. Cv. Teodosie",
+                    "desc": "",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 13,
+            "end": 19,
+            "start_day_index": 1,
+            "days": {
+                "17": {
+                    "name": "\u2020) Sf. Cv. Antonie",
+                    "desc": "cel mare",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "18": {
+                    "name": "\u2020 Sf. Ier. Atanasie",
+                    "desc": "si Chiril",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "4": {
+            "start": 20,
+            "end": 26,
+            "start_day_index": 1,
+            "days": {
+                "20": {
+                    "name": "\u2020) Sf. Cuv. Eftimie",
+                    "desc": "cel Mare",
+                    "free": false,
+                    "cross": "black",
+                    "chime": true
+                },
+                "24": {
+                    "name": "Unirea Principatelor",
+                    "desc": "Romane",
+                    "free": true,
+                    "cross": null,
+                    "chime": true
+                },
+                "25": {
+                    "name": "\u2020) Sf. Ier. Grigorie",
+                    "desc": "Teologul",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 27,
+            "end": 31,
+            "start_day_index": 1,
+            "days": {
+                "27": {
+                    "name": "\u2020  Aducerea moa\u0219telor",
+                    "desc": "Sf. Ier. Ioan Gur\u0103 de Aur",
+                    "free": false,
+                    "cross": "black",
+                    "chime": true
+                },
+                "30": {
+                    "name": "\u2020) Sf. Trei Ierarhi",
+                    "desc": "Vasile, Grigorie si Ioan",
+                    "free": false,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        }
+    }
+}

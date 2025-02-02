@@ -1,0 +1,15 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="rocal_full.png" />
+    <bitmap id="errorToastIcon" personality="
+        system_icon_destructive__warning
+        system_size__toast_icon
+    "/>
+    <bitmap id="infoToastIcon" personality="
+        system_icon_dark__about
+        system_size__toast_icon
+    "/>
+
+    <drawable-list id="month_draw">
+    
+    </drawable-list>
+</drawables>

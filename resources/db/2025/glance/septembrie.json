@@ -1,0 +1,31 @@
+{
+    "name": "septembrie",
+    "last": 30,
+    "days": {
+        "1": {
+            "name": "\u2020 Inceputul anului bisericesc",
+            "free": false,
+            "cross": "black"
+        },
+        "8": {
+            "name": "(\u2020) Nasterea Maicii Domnului",
+            "free": false,
+            "cross": "red"
+        },
+        "14": {
+            "name": "(\u2020) Inaltarea Sfintei Cruci",
+            "free": false,
+            "cross": "red"
+        },
+        "26": {
+            "name": "\u2020) Mutarea Sf. Ap. \u0219i Ev. Ioan",
+            "free": false,
+            "cross": "black"
+        },
+        "28": {
+            "name": "\u2020 Sf. Cuv. Hariton M\u0103rt ",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

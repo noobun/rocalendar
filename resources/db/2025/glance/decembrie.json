@@ -1,0 +1,46 @@
+{
+    "name": "decembrie",
+    "last": 31,
+    "days": {
+        "1": {
+            "name": "Ziua Nationala a Romaniei",
+            "free": true,
+            "cross": null
+        },
+        "2": {
+            "name": "\u2020 Sf. M. Mc. Varvara ",
+            "free": false,
+            "cross": "black"
+        },
+        "3": {
+            "name": "\u2020) Sf. Cuv. Sava cel Sfin\u021bit",
+            "free": false,
+            "cross": "black"
+        },
+        "6": {
+            "name": "\u2020) Sf. Ier. Nicolae arhiep. Mirelor Lichiei",
+            "free": false,
+            "cross": "red"
+        },
+        "12": {
+            "name": "\u2020) Sf. Ier. Spiridon ",
+            "free": false,
+            "cross": "black"
+        },
+        "25": {
+            "name": "(\u2020) Nasterea Domnului (Craciunul)",
+            "free": true,
+            "cross": "red"
+        },
+        "26": {
+            "name": "\u2020) Soborul Maicii Domnului A doua zi de Craciun",
+            "free": true,
+            "cross": "red"
+        },
+        "27": {
+            "name": "\u2020 Sf. Ap. \u0218tefan A treia zi de Cr\u0103ciun",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

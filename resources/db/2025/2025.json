@@ -1,0 +1,955 @@
+[
+    {
+        "month": "ianuarie",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 5,
+                "start_day_index": 3,
+                "days": {
+                    "1": {
+                        "name": "(†) Sf. Ier. Vasile",
+                        "desc": "Prima zi a anului",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "2": {
+                        "name": "A doua zi de anul nou",
+                        "desc": "",
+                        "free": true,
+                        "cross": null,
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 6,
+                "end": 12,
+                "start_day_index": 1,
+                "days": {
+                    "6": {
+                        "name": "(†) Boboteaza",
+                        "desc": "Botezul Domnului",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "7": {
+                        "name": "† Sf. Ioan Botezatorul",
+                        "desc": "Soborul Sfantului Ioan Botezatorul",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "11": {
+                        "name": "† Sf. Cv. Teodosie",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 13,
+                "end": 19,
+                "start_day_index": 1,
+                "days": {
+                    "17": {
+                        "name": "†) Sf. Cv. Antonie",
+                        "desc": "cel mare",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "18": {
+                        "name": "† Sf. Ier. Atanasie",
+                        "desc": "si Chiril",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 20,
+                "end": 26,
+                "start_day_index": 1,
+                "days": {
+                    "20": {
+                        "name": "†) Sf. Cuv. Eftimie",
+                        "desc": "cel Mare",
+                        "free": false,
+                        "cross": "black",
+                        "chime": true
+                    },
+                    "24": {
+                        "name": "Unirea Principatelor",
+                        "desc": "Romane",
+                        "free": true,
+                        "cross": null,
+                        "chime": true
+                    },
+                    "25": {
+                        "name": "†) Sf. Ier. Grigorie",
+                        "desc": "Teologul",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 27,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {
+                    "27": {
+                        "name": "†  Aducerea moaștelor",
+                        "desc": "Sf. Ier. Ioan Gură de Aur",
+                        "free": false,
+                        "cross": "black",
+                        "chime": true
+                    },
+                    "30": {
+                        "name": "†) Sf. Trei Ierarhi",
+                        "desc": "Vasile, Grigorie si Ioan",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "februarie",
+        "last": 28,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 2,
+                "start_day_index": 6,
+                "days": {
+                    "2": {
+                        "name": "(†) Intampinarea domnului",
+                        "desc": "Duminica XVII dupa Rusalii",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 3,
+                "end": 9,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "3": {
+                "start": 10,
+                "end": 16,
+                "start_day_index": 1,
+                "days": {
+                    "10": {
+                        "name": "†) Sf. Mc. Haralambie",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 17,
+                "end": 23,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "5": {
+                "start": 24,
+                "end": 28,
+                "start_day_index": 1,
+                "days": {
+                    "24": {
+                        "name": "† Întâia și a doua",
+                        "desc": "aflare a Capului Sf. Ioan",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "martie",
+        "last": 31,
+        "nr_weeks": 6,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 2,
+                "start_day_index": 6,
+                "days": {}
+            },
+            "2": {
+                "start": 3,
+                "end": 9,
+                "start_day_index": 1,
+                "days": {
+                    "9": {
+                        "name": "† Sf. 40 de Mc.",
+                        "desc": "din Sevastia",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "3": {
+                "start": 10,
+                "end": 16,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "4": {
+                "start": 17,
+                "end": 23,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "5": {
+                "start": 24,
+                "end": 30,
+                "start_day_index": 1,
+                "days": {
+                    "25": {
+                        "name": "(†) Buna Vestire",
+                        "desc": "",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "6": {
+                "start": 31,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {}
+            }
+        }
+    },
+    {
+        "month": "aprilie",
+        "last": 30,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 6,
+                "start_day_index": 2,
+                "days": {}
+            },
+            "2": {
+                "start": 7,
+                "end": 13,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "3": {
+                "start": 14,
+                "end": 20,
+                "start_day_index": 1,
+                "days": {
+                    "18": {
+                        "name": "Vinerea Mare",
+                        "desc": "",
+                        "free": true,
+                        "cross": null,
+                        "chime": true
+                    },
+                    "20": {
+                        "name": "(†) Invierea Domnului",
+                        "desc": "",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "4": {
+                "start": 21,
+                "end": 27,
+                "start_day_index": 1,
+                "days": {
+                    "21": {
+                        "name": "(†) A doua zi de pasti",
+                        "desc": "",
+                        "free": true,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "22": {
+                        "name": "(†) A treia zi de pasti",
+                        "desc": "Drumul spre Emaus",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "23": {
+                        "name": "†) Sf. M. Mc. Gheorghe",
+                        "desc": "Purtator de biruinta",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "25": {
+                        "name": "†) Izvorul Tamaduirii",
+                        "desc": "",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "5": {
+                "start": 28,
+                "end": 30,
+                "start_day_index": 1,
+                "days": {}
+            }
+        }
+    },
+    {
+        "month": "mai",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 4,
+                "start_day_index": 4,
+                "days": {
+                    "1": {
+                        "name": "Ziua Muncii",
+                        "desc": "Sarbatoare legala",
+                        "free": true,
+                        "cross": null,
+                        "chime": true
+                    }
+                }
+            },
+            "2": {
+                "start": 5,
+                "end": 11,
+                "start_day_index": 1,
+                "days": {
+                    "8": {
+                        "name": "†) Sf. Ap. Ioan",
+                        "desc": "Teologul",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 12,
+                "end": 18,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "4": {
+                "start": 19,
+                "end": 25,
+                "start_day_index": 1,
+                "days": {
+                    "21": {
+                        "name": "†) Sf. Imp. Constantin",
+                        "desc": "si Elena Imp. Constantinopolui",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "25": {
+                        "name": "† A treia aflare",
+                        "desc": "a capului Sf. Ioan",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "5": {
+                "start": 26,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {
+                    "29": {
+                        "name": "(†) Înălțarea Domnului",
+                        "desc": "",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "iunie",
+        "last": 30,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 1,
+                "start_day_index": 7,
+                "days": {
+                    "1": {
+                        "name": "Ziua Copilului",
+                        "desc": "Sarbatoare legala",
+                        "free": true,
+                        "cross": null,
+                        "chime": true
+                    }
+                }
+            },
+            "2": {
+                "start": 2,
+                "end": 8,
+                "start_day_index": 1,
+                "days": {
+                    "8": {
+                        "name": "(†) Pogorarea Sf. Duh",
+                        "desc": "Rusalii",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "3": {
+                "start": 9,
+                "end": 15,
+                "start_day_index": 1,
+                "days": {
+                    "9": {
+                        "name": "(†) Sf. Treime",
+                        "desc": "A doua zi Rusalii",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "4": {
+                "start": 16,
+                "end": 22,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "5": {
+                "start": 23,
+                "end": 29,
+                "start_day_index": 1,
+                "days": {
+                    "24": {
+                        "name": "(†) Nast. Sf. Proroc Ioan",
+                        "desc": "Botezatorului (Sanziene)",
+                        "free": false,
+                        "cross": "red",
+                        "chime": true
+                    },
+                    "29": {
+                        "name": "(†) Sf. Ap. Petru si Pavel",
+                        "desc": "†",
+                        "free": true,
+                        "cross": "red",
+                        "chime": true
+                    }
+                }
+            },
+            "6": {
+                "start": 30,
+                "end": 30,
+                "start_day_index": 1,
+                "days": {
+                    "30": {
+                        "name": "† Soborul Sf. 12 Ap.",
+                        "desc": "de la Ramet",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "iulie",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 6,
+                "start_day_index": 2,
+                "days": {
+                    "5": {
+                        "name": "† Sf. Cuv. Atanasie",
+                        "desc": "Atonitul",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 7,
+                "end": 13,
+                "start_day_index": 1,
+                "days": {
+                    "7": {
+                        "name": "†) Sf. M. Mc. Chiriachi",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 14,
+                "end": 20,
+                "start_day_index": 1,
+                "days": {
+                    "20": {
+                        "name": "†) Sf. Slăvitul",
+                        "desc": "Prooroc Ilie Tesviteanul",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 21,
+                "end": 27,
+                "start_day_index": 1,
+                "days": {
+                    "27": {
+                        "name": "† Sf. M. Mc.",
+                        "desc": "și Tămăduitor Pantelimon",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 28,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {}
+            }
+        }
+    },
+    {
+        "month": "august",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 3,
+                "start_day_index": 5,
+                "days": {}
+            },
+            "2": {
+                "start": 4,
+                "end": 10,
+                "start_day_index": 1,
+                "days": {
+                    "6": {
+                        "name": "(†) Schimbarea la Fata",
+                        "desc": "a Domnului",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 11,
+                "end": 17,
+                "start_day_index": 1,
+                "days": {
+                    "15": {
+                        "name": "Adormirea Maicii",
+                        "desc": "Domnului",
+                        "free": true,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 18,
+                "end": 24,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "5": {
+                "start": 25,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {
+                    "29": {
+                        "name": "(†) Taierea Capului",
+                        "desc": "Sf. Prooroc Ioan Botezatorul",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "septembrie",
+        "last": 30,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 7,
+                "start_day_index": 1,
+                "days": {
+                    "1": {
+                        "name": "† Inceputul anului",
+                        "desc": "bisericesc",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 8,
+                "end": 14,
+                "start_day_index": 1,
+                "days": {
+                    "8": {
+                        "name": "(†) Nasterea Maicii",
+                        "desc": "Domnului",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "14": {
+                        "name": "(†) Inaltarea Sfintei",
+                        "desc": "Cruci",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 15,
+                "end": 21,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "4": {
+                "start": 22,
+                "end": 28,
+                "start_day_index": 1,
+                "days": {
+                    "26": {
+                        "name": "†) Mutarea Sf. Ap.",
+                        "desc": "și Ev. Ioan",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "28": {
+                        "name": "† Sf. Cuv. Hariton Mărt",
+                        "desc": "",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 29,
+                "end": 30,
+                "start_day_index": 1,
+                "days": {}
+            }
+        }
+    },
+    {
+        "month": "octombrie",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 5,
+                "start_day_index": 3,
+                "days": {
+                    "1": {
+                        "name": "(†) Acoperamantul Maicii",
+                        "desc": "Domnului",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 6,
+                "end": 12,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "3": {
+                "start": 13,
+                "end": 19,
+                "start_day_index": 1,
+                "days": {
+                    "14": {
+                        "name": "†) Sf. Cv. Parascheva",
+                        "desc": "de la Iasi",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 20,
+                "end": 26,
+                "start_day_index": 1,
+                "days": {
+                    "26": {
+                        "name": "†) Sf. M. Mc. Dimitrie",
+                        "desc": "Izvoratorul de mir",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 27,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {
+                    "27": {
+                        "name": "†) Sf. Cuv. Dimitrie ",
+                        "desc": "cel Nou Ocrotitorul Bucurestilor",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "noiembrie",
+        "last": 30,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 2,
+                "start_day_index": 6,
+                "days": {}
+            },
+            "2": {
+                "start": 3,
+                "end": 9,
+                "start_day_index": 1,
+                "days": {
+                    "8": {
+                        "name": "†) Sf. Arh. Mihail",
+                        "desc": "si Gavriil",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "9": {
+                        "name": "†) Sf. Ier. Nectarie",
+                        "desc": "Taumaturgul de la Eghina",
+                        "free": false,
+                        "cross": "blue",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 10,
+                "end": 16,
+                "start_day_index": 1,
+                "days": {
+                    "11": {
+                        "name": "† Sf. M. Mc. Mina",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "13": {
+                        "name": "†) Sf. Ier. Ioan",
+                        "desc": "Gură de Aur",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "14": {
+                        "name": "† Sf. Ap. Filip",
+                        "desc": "unul dintre cei 12 Apostoli",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "4": {
+                "start": 17,
+                "end": 23,
+                "start_day_index": 1,
+                "days": {
+                    "21": {
+                        "name": "(†) Intrarea in Biserica",
+                        "desc": "a Maicii Domnului",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 24,
+                "end": 30,
+                "start_day_index": 1,
+                "days": {
+                    "30": {
+                        "name": "†) Sf. Ap. Andrei",
+                        "desc": "Sarbatoare legala",
+                        "free": true,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            }
+        }
+    },
+    {
+        "month": "decembrie",
+        "last": 31,
+        "nr_weeks": 5,
+        "weeks": {
+            "1": {
+                "start": 1,
+                "end": 7,
+                "start_day_index": 1,
+                "days": {
+                    "1": {
+                        "name": "Ziua Nationala",
+                        "desc": "a Romaniei",
+                        "free": true,
+                        "cross": null,
+                        "chime": false
+                    },
+                    "2": {
+                        "name": "† Sf. M. Mc. Varvara",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "3": {
+                        "name": "†) Sf. Cuv. Sava",
+                        "desc": "cel Sfințit",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    },
+                    "6": {
+                        "name": "†) Sf. Ier. Nicolae",
+                        "desc": "arhiep. Mirelor Lichiei",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "2": {
+                "start": 8,
+                "end": 14,
+                "start_day_index": 1,
+                "days": {
+                    "12": {
+                        "name": "†) Sf. Ier. Spiridon",
+                        "desc": "",
+                        "free": false,
+                        "cross": "black",
+                        "chime": false
+                    }
+                }
+            },
+            "3": {
+                "start": 15,
+                "end": 21,
+                "start_day_index": 1,
+                "days": {}
+            },
+            "4": {
+                "start": 22,
+                "end": 28,
+                "start_day_index": 1,
+                "days": {
+                    "25": {
+                        "name": "(†) Nasterea Domnului",
+                        "desc": "(Craciunul)",
+                        "free": true,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "26": {
+                        "name": "†) Soborul Maicii Domnului",
+                        "desc": "A doua zi de Craciun",
+                        "free": true,
+                        "cross": "red",
+                        "chime": false
+                    },
+                    "27": {
+                        "name": "† Sf. Ap. Ștefan",
+                        "desc": "A treia zi de Crăciun",
+                        "free": false,
+                        "cross": "red",
+                        "chime": false
+                    }
+                }
+            },
+            "5": {
+                "start": 29,
+                "end": 31,
+                "start_day_index": 1,
+                "days": {}
+            }
+        }
+    }
+]

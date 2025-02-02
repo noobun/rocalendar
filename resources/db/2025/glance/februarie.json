@@ -1,0 +1,21 @@
+{
+    "name": "februarie",
+    "last": 28,
+    "days": {
+        "2": {
+            "name": "(\u2020) Intampinarea domnului Duminica XVII dupa Rusalii",
+            "free": false,
+            "cross": "red"
+        },
+        "10": {
+            "name": "\u2020) Sf. Mc. Haralambie ",
+            "free": false,
+            "cross": "black"
+        },
+        "24": {
+            "name": "\u2020 \u00cent\u00e2ia \u0219i a doua aflare a Capului Sf. Ioan",
+            "free": false,
+            "cross": "black"
+        }
+    }
+}

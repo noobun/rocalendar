@@ -1,0 +1,81 @@
+{
+    "month": "aprilie",
+    "last": 30,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 6,
+            "start_day_index": 2,
+            "days": {}
+        },
+        "2": {
+            "start": 7,
+            "end": 13,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "3": {
+            "start": 14,
+            "end": 20,
+            "start_day_index": 1,
+            "days": {
+                "18": {
+                    "name": "Vinerea Mare",
+                    "desc": "",
+                    "free": true,
+                    "cross": null,
+                    "chime": true
+                },
+                "20": {
+                    "name": "(\u2020) Invierea Domnului",
+                    "desc": "",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        },
+        "4": {
+            "start": 21,
+            "end": 27,
+            "start_day_index": 1,
+            "days": {
+                "21": {
+                    "name": "(\u2020) A doua zi de pasti",
+                    "desc": "",
+                    "free": true,
+                    "cross": "red",
+                    "chime": false
+                },
+                "22": {
+                    "name": "(\u2020) A treia zi de pasti",
+                    "desc": "Drumul spre Emaus",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                },
+                "23": {
+                    "name": "\u2020) Sf. M. Mc. Gheorghe",
+                    "desc": "Purtator de biruinta",
+                    "free": false,
+                    "cross": "red",
+                    "chime": true
+                },
+                "25": {
+                    "name": "\u2020) Izvorul Tamaduirii",
+                    "desc": "",
+                    "free": false,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        },
+        "5": {
+            "start": 28,
+            "end": 30,
+            "start_day_index": 1,
+            "days": {}
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "aprilie",
+    "last": 30,
+    "days": {
+        "18": {
+            "name": "Vinerea Mare ",
+            "free": true,
+            "cross": null
+        },
+        "20": {
+            "name": "(\u2020) Invierea Domnului ",
+            "free": true,
+            "cross": "red"
+        },
+        "21": {
+            "name": "(\u2020) A doua zi de pasti ",
+            "free": true,
+            "cross": "red"
+        },
+        "22": {
+            "name": "(\u2020) A treia zi de pasti Drumul spre Emaus",
+            "free": false,
+            "cross": "red"
+        },
+        "23": {
+            "name": "\u2020) Sf. M. Mc. Gheorghe Purtator de biruinta",
+            "free": false,
+            "cross": "red"
+        },
+        "25": {
+            "name": "\u2020) Izvorul Tamaduirii ",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

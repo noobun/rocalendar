@@ -1,0 +1,27 @@
+<resources> 
+    <jsonData id="main_ianuarie"   scope="glance" filename="2025/main/ianuarie.json"/>
+    <jsonData id="main_februarie"  scope="glance" filename="2025/main/februarie.json"/>
+    <jsonData id="main_martie"     scope="glance" filename="2025/main/martie.json"/>
+    <jsonData id="main_aprilie"    scope="glance" filename="2025/main/aprilie.json"/>
+    <jsonData id="main_mai"        scope="glance" filename="2025/main/mai.json"/>
+    <jsonData id="main_iunie"      scope="glance" filename="2025/main/iunie.json"/>
+    <jsonData id="main_iulie"      scope="glance" filename="2025/main/iulie.json"/>
+    <jsonData id="main_august"     scope="glance" filename="2025/main/august.json"/>
+    <jsonData id="main_septembrie" scope="glance" filename="2025/main/septembrie.json"/>
+    <jsonData id="main_octombrie"  scope="glance" filename="2025/main/octombrie.json"/>
+    <jsonData id="main_noiembrie"  scope="glance" filename="2025/main/noiembrie.json"/>
+    <jsonData id="main_decembrie"  scope="glance" filename="2025/main/decembrie.json"/>
+
+    <jsonData id="db_glance_ianuarie"   scope="glance" filename="2025/glance/ianuarie.json"/>
+    <jsonData id="db_glance_februarie"  scope="glance" filename="2025/glance/februarie.json"/>
+    <jsonData id="db_glance_martie"     scope="glance" filename="2025/glance/martie.json"/>
+    <jsonData id="db_glance_aprilie"    scope="glance" filename="2025/glance/aprilie.json"/>
+    <jsonData id="db_glance_mai"        scope="glance" filename="2025/glance/mai.json"/>
+    <jsonData id="db_glance_iunie"      scope="glance" filename="2025/glance/iunie.json"/>
+    <jsonData id="db_glance_iulie"      scope="glance" filename="2025/glance/iulie.json"/>
+    <jsonData id="db_glance_august"     scope="glance" filename="2025/glance/august.json"/>
+    <jsonData id="db_glance_septembrie" scope="glance" filename="2025/glance/septembrie.json"/>
+    <jsonData id="db_glance_octombrie"  scope="glance" filename="2025/glance/octombrie.json"/>
+    <jsonData id="db_glance_noiembrie"  scope="glance" filename="2025/glance/noiembrie.json"/>
+    <jsonData id="db_glance_decembrie"  scope="glance" filename="2025/glance/decembrie.json"/>
+</resources>

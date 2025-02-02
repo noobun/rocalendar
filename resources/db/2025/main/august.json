@@ -1,0 +1,61 @@
+{
+    "month": "august",
+    "last": 31,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 3,
+            "start_day_index": 5,
+            "days": {}
+        },
+        "2": {
+            "start": 4,
+            "end": 10,
+            "start_day_index": 1,
+            "days": {
+                "6": {
+                    "name": "(\u2020) Schimbarea la Fata",
+                    "desc": "a Domnului",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 11,
+            "end": 17,
+            "start_day_index": 1,
+            "days": {
+                "15": {
+                    "name": "Adormirea Maicii",
+                    "desc": "Domnului",
+                    "free": true,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "4": {
+            "start": 18,
+            "end": 24,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "5": {
+            "start": 25,
+            "end": 31,
+            "start_day_index": 1,
+            "days": {
+                "29": {
+                    "name": "(\u2020) Taierea Capului",
+                    "desc": "Sf. Prooroc Ioan Botezatorul",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        }
+    }
+}

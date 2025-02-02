@@ -1,0 +1,75 @@
+{
+    "month": "septembrie",
+    "last": 30,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 7,
+            "start_day_index": 1,
+            "days": {
+                "1": {
+                    "name": "\u2020 Inceputul anului",
+                    "desc": "bisericesc",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "2": {
+            "start": 8,
+            "end": 14,
+            "start_day_index": 1,
+            "days": {
+                "8": {
+                    "name": "(\u2020) Nasterea Maicii",
+                    "desc": "Domnului",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                },
+                "14": {
+                    "name": "(\u2020) Inaltarea Sfintei",
+                    "desc": "Cruci",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 15,
+            "end": 21,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "4": {
+            "start": 22,
+            "end": 28,
+            "start_day_index": 1,
+            "days": {
+                "26": {
+                    "name": "\u2020) Mutarea Sf. Ap.",
+                    "desc": "\u0219i Ev. Ioan",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "28": {
+                    "name": "\u2020 Sf. Cuv. Hariton M\u0103rt",
+                    "desc": "",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 29,
+            "end": 30,
+            "start_day_index": 1,
+            "days": {}
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "mai",
+    "last": 31,
+    "days": {
+        "1": {
+            "name": "Ziua Muncii Sarbatoare legala",
+            "free": true,
+            "cross": null
+        },
+        "8": {
+            "name": "\u2020) Sf. Ap. Ioan Teologul",
+            "free": false,
+            "cross": "black"
+        },
+        "21": {
+            "name": "\u2020) Sf. Imp. Constantin si Elena Imp. Constantinopolui",
+            "free": false,
+            "cross": "red"
+        },
+        "25": {
+            "name": "\u2020 A treia aflare a capului Sf. Ioan",
+            "free": false,
+            "cross": "red"
+        },
+        "29": {
+            "name": "(\u2020) \u00cen\u0103l\u021barea Domnului ",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

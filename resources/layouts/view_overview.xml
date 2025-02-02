@@ -1,0 +1,24 @@
+<layout id="view_overview">
+    <!-- <label 
+        id="month"
+        x="center" 
+        y="3%" 
+        text="@Strings.month" 
+        color="Gfx.COLOR_WHITE" 
+        justification="Gfx.TEXT_JUSTIFY_CENTER" 
+        font="Gfx.FONT_SYSTEM_XTINY"
+    /> -->
+    <label 
+        id="year"
+        x="center" 
+        y="90%" 
+        text="@Strings.year" 
+        color="Gfx.COLOR_WHITE" 
+        justification="Gfx.TEXT_JUSTIFY_CENTER" 
+        font="Gfx.FONT_SYSTEM_XTINY"
+    />
+    <!-- Left top hint -->
+        <bitmap id="leftTop" personality="
+            system_icon_dark__hint_button_left_top
+            system_loc__hint_button_left_top" />
+</layout>

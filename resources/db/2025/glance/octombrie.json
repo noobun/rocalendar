@@ -1,0 +1,26 @@
+{
+    "name": "octombrie",
+    "last": 31,
+    "days": {
+        "1": {
+            "name": "(\u2020) Acoperamantul Maicii Domnului",
+            "free": false,
+            "cross": "red"
+        },
+        "14": {
+            "name": "\u2020) Sf. Cv. Parascheva de la Iasi",
+            "free": false,
+            "cross": "red"
+        },
+        "26": {
+            "name": "\u2020) Sf. M. Mc. Dimitrie Izvoratorul de mir",
+            "free": false,
+            "cross": "red"
+        },
+        "27": {
+            "name": "\u2020) Sf. Cuv. Dimitrie  cel Nou Ocrotitorul Bucurestilor",
+            "free": false,
+            "cross": "red"
+        }
+    }
+}

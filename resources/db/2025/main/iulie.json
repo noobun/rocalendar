@@ -1,0 +1,69 @@
+{
+    "month": "iulie",
+    "last": 31,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 6,
+            "start_day_index": 2,
+            "days": {
+                "5": {
+                    "name": "\u2020 Sf. Cuv. Atanasie",
+                    "desc": "Atonitul",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "2": {
+            "start": 7,
+            "end": 13,
+            "start_day_index": 1,
+            "days": {
+                "7": {
+                    "name": "\u2020) Sf. M. Mc. Chiriachi",
+                    "desc": "",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 14,
+            "end": 20,
+            "start_day_index": 1,
+            "days": {
+                "20": {
+                    "name": "\u2020) Sf. Sl\u0103vitul",
+                    "desc": "Prooroc Ilie Tesviteanul",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "4": {
+            "start": 21,
+            "end": 27,
+            "start_day_index": 1,
+            "days": {
+                "27": {
+                    "name": "\u2020 Sf. M. Mc.",
+                    "desc": "\u0219i T\u0103m\u0103duitor Pantelimon",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 28,
+            "end": 31,
+            "start_day_index": 1,
+            "days": {}
+        }
+    }
+}

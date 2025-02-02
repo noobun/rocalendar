@@ -1,0 +1,90 @@
+{
+    "month": "iunie",
+    "last": 30,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 1,
+            "start_day_index": 7,
+            "days": {
+                "1": {
+                    "name": "Ziua Copilului",
+                    "desc": "Sarbatoare legala",
+                    "free": true,
+                    "cross": null,
+                    "chime": true
+                }
+            }
+        },
+        "2": {
+            "start": 2,
+            "end": 8,
+            "start_day_index": 1,
+            "days": {
+                "8": {
+                    "name": "(\u2020) Pogorarea Sf. Duh",
+                    "desc": "Rusalii",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        },
+        "3": {
+            "start": 9,
+            "end": 15,
+            "start_day_index": 1,
+            "days": {
+                "9": {
+                    "name": "(\u2020) Sf. Treime",
+                    "desc": "A doua zi Rusalii",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        },
+        "4": {
+            "start": 16,
+            "end": 22,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "5": {
+            "start": 23,
+            "end": 29,
+            "start_day_index": 1,
+            "days": {
+                "24": {
+                    "name": "(\u2020) Nast. Sf. Proroc Ioan",
+                    "desc": "Botezatorului (Sanziene)",
+                    "free": false,
+                    "cross": "red",
+                    "chime": true
+                },
+                "29": {
+                    "name": "(\u2020) Sf. Ap. Petru si Pavel",
+                    "desc": "\u2020",
+                    "free": true,
+                    "cross": "red",
+                    "chime": true
+                }
+            }
+        },
+        "6": {
+            "start": 30,
+            "end": 30,
+            "start_day_index": 1,
+            "days": {
+                "30": {
+                    "name": "\u2020 Soborul Sf. 12 Ap.",
+                    "desc": "de la Ramet",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "month": "decembrie",
+    "last": 31,
+    "nr_weeks": 5,
+    "weeks": {
+        "1": {
+            "start": 1,
+            "end": 7,
+            "start_day_index": 1,
+            "days": {
+                "1": {
+                    "name": "Ziua Nationala",
+                    "desc": "a Romaniei",
+                    "free": true,
+                    "cross": null,
+                    "chime": false
+                },
+                "2": {
+                    "name": "\u2020 Sf. M. Mc. Varvara",
+                    "desc": "",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "3": {
+                    "name": "\u2020) Sf. Cuv. Sava",
+                    "desc": "cel Sfin\u021bit",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                },
+                "6": {
+                    "name": "\u2020) Sf. Ier. Nicolae",
+                    "desc": "arhiep. Mirelor Lichiei",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "2": {
+            "start": 8,
+            "end": 14,
+            "start_day_index": 1,
+            "days": {
+                "12": {
+                    "name": "\u2020) Sf. Ier. Spiridon",
+                    "desc": "",
+                    "free": false,
+                    "cross": "black",
+                    "chime": false
+                }
+            }
+        },
+        "3": {
+            "start": 15,
+            "end": 21,
+            "start_day_index": 1,
+            "days": {}
+        },
+        "4": {
+            "start": 22,
+            "end": 28,
+            "start_day_index": 1,
+            "days": {
+                "25": {
+                    "name": "(\u2020) Nasterea Domnului",
+                    "desc": "(Craciunul)",
+                    "free": true,
+                    "cross": "red",
+                    "chime": false
+                },
+                "26": {
+                    "name": "\u2020) Soborul Maicii Domnului",
+                    "desc": "A doua zi de Craciun",
+                    "free": true,
+                    "cross": "red",
+                    "chime": false
+                },
+                "27": {
+                    "name": "\u2020 Sf. Ap. \u0218tefan",
+                    "desc": "A treia zi de Cr\u0103ciun",
+                    "free": false,
+                    "cross": "red",
+                    "chime": false
+                }
+            }
+        },
+        "5": {
+            "start": 29,
+            "end": 31,
+            "start_day_index": 1,
+            "days": {}
+        }
+    }
+}
