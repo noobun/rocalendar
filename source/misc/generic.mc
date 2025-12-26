@@ -9,6 +9,56 @@ import Toybox.Communications;
 import Toybox.Attention;
 using Toybox.Math;
 
+(:glance )
+function getSupportedYears(){
+    return {
+        "2025" => Rez.JsonData.year_2025,
+        "2026" => Rez.JsonData.year_2026
+    };
+}
+
+// var years = {
+//     "2025" => Rez.JsonData.year_2025,
+//     "2026" => Rez.JsonData.year_2026
+// };
+
+var weekdayname = ["Lu", "Ma", "Mi", "Jo", "Vi", "Sm", "Du"];
+
+var monthname = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie",
+                "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];   
+
+(:glance )
+function getDaysInMonth(year as Number, month as Number) as Number {
+
+    // Create a moment for the 1st day of the current month
+    var start = Gregorian.moment({
+        :year  => year,
+        :month => month,
+        :day   => 1
+    });
+
+    // Create a moment for the 1st day of the next month
+    var nextStart;
+    if (month == 12) {
+        nextStart = Gregorian.moment({
+            :year  => year + 1,
+            :month => 1,
+            :day   => 1
+        });
+    } else {
+        nextStart = Gregorian.moment({
+            :year  => year,
+            :month => month + 1,
+            :day   => 1
+        });
+    }
+
+    // Duration between them in seconds
+    var diff = nextStart.subtract(start);
+
+    // Convert seconds → days
+    return diff.value() / Gregorian.SECONDS_PER_DAY;
+}
 
 (:glance )
 function vibrateAttention() {

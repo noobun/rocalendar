@@ -6,6 +6,8 @@ import Toybox.System;
 import Toybox.Communications;
 using Toybox.Graphics;
 using Toybox.Attention;
+using Toybox.Time.Gregorian;
+using Toybox.Time;
 
 class OverviewDelegate extends WatchUi.BehaviorDelegate {
     var httpreq;
@@ -16,7 +18,13 @@ class OverviewDelegate extends WatchUi.BehaviorDelegate {
 
     var db = Storage.getValue("db");
     var now_month = Storage.getValue("now_month");
+    var now_year = Storage.getValue("now_year");
+    var now_day = Storage.getValue("now_day");
+
+    var supported_years = Properties.getValue("supportedyears") as Number;
+
     var month = Storage.getValue("now_month");
+    var year = Storage.getValue("now_year");
 
     function initialize(manager) {
         BehaviorDelegate.initialize();
@@ -41,7 +49,8 @@ class OverviewDelegate extends WatchUi.BehaviorDelegate {
 
     function eventHandling(code){
         if(code==4 || code==3){ // Forward
-            Storage.setValue("current_month", month);
+            Storage.setValue("selected_mount", month);
+            Storage.setValue("selected_year", year);
 
             if(_manager.moveSubPage(1)){
                 var page = _manager.getCurrentPage();
@@ -52,9 +61,10 @@ class OverviewDelegate extends WatchUi.BehaviorDelegate {
             var currentSubLevel = _manager.getSubViewIndex();
             var currentLevel = _manager.getViewIndex();
 
-            if(month!=now_month){
-                _view.onDataReceived(now_month);
+            if(month!=now_month or year!=now_year){
+                _view.onDataReceived(now_month, now_year);
                 month = now_month;
+                year = now_year;
             }else{
                 if(currentSubLevel==0){
                     if(currentLevel==0){
@@ -76,15 +86,26 @@ class OverviewDelegate extends WatchUi.BehaviorDelegate {
             month = month + 1;
             if(month > 12){
                 month = 1;
+                year++;
+                if(year>now_year+supported_years){
+                    year=now_year;
+                }
             }
         }
         if(code==13 || code==2){ // Up
             month = month - 1;
             if(month < 1){
                 month = 12;
+                year--;
+                if(year<now_year){
+                    year=now_year+supported_years;
+                }
             }
         }
-        _view.onDataReceived(month);
+
+        Storage.setValue("selected_month", month);
+        Storage.setValue("selected_year", year);
+        _view.onDataReceived(month, year);
     }
 
     function vibrateAttention() {

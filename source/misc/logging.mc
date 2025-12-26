@@ -27,7 +27,7 @@ public function getNow() as Lang.String {
 
 (:glance)
 public function writeLog(component as String, message as String, level as Number) as Void {
-    if(level<=Properties.getValue("logging")){
+    //if(level<=Properties.getValue("logging")){
         System.println(level.toString() + " | " + getNow()+" "+component+" | "+message.toString());
-    }
+    //}
 }

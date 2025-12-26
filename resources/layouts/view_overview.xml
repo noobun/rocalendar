@@ -8,7 +8,7 @@
         justification="Gfx.TEXT_JUSTIFY_CENTER" 
         font="Gfx.FONT_SYSTEM_XTINY"
     /> -->
-    <label 
+    <!-- <label 
         id="year"
         x="center" 
         y="90%" 
@@ -16,7 +16,7 @@
         color="Gfx.COLOR_WHITE" 
         justification="Gfx.TEXT_JUSTIFY_CENTER" 
         font="Gfx.FONT_SYSTEM_XTINY"
-    />
+    /> -->
     <!-- Left top hint -->
         <bitmap id="leftTop" personality="
             system_icon_dark__hint_button_left_top

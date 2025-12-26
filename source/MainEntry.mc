@@ -39,7 +39,9 @@ class MainEntry extends Application.AppBase {
         Storage.setValue("now_month", now.month);
         Storage.setValue("now_day", now.day);
 
-        Storage.setValue("current_month", now.month);
+        Storage.setValue("selected_month", now.month);
+        Storage.setValue("selected_year", now.year);
+        Storage.setValue("selected_day", now.day);
 
         manager = new ViewManager();
         return manager.getCurrentPage();
@@ -54,31 +56,6 @@ class MainEntry extends Application.AppBase {
     }
 
     (:glance) function getGlanceView() {
-        var glance_res_dict = [
-            Rez.JsonData.db_glance_ianuarie,
-            Rez.JsonData.db_glance_februarie,
-            Rez.JsonData.db_glance_martie,
-            Rez.JsonData.db_glance_aprilie,
-            Rez.JsonData.db_glance_mai,
-            Rez.JsonData.db_glance_iunie,
-            Rez.JsonData.db_glance_iulie,
-            Rez.JsonData.db_glance_august,
-            Rez.JsonData.db_glance_septembrie,
-            Rez.JsonData.db_glance_octombrie,
-            Rez.JsonData.db_glance_noiembrie,
-            Rez.JsonData.db_glance_decembrie
-        ];
-        var now_month = Gregorian.info(Time.now(), Time.FORMAT_SHORT).month;
-
-        var glance_database = [];
-        glance_database.add(Application.loadResource(glance_res_dict[now_month-1]));
-
-        if(now_month < 12){
-            glance_database.add(Application.loadResource(glance_res_dict[now_month]));
-        }
-
-        Storage.setValue("db_glance", glance_database);
-
         var glanceView = new OverviewGlanceView();
         return [ glanceView, new OverviewGlanceDelegate(glanceView) ];
     }  
