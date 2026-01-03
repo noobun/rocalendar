@@ -60,20 +60,24 @@ class OverviewGlanceView extends WatchUi.GlanceView
                 if(mo<now.month and y_key.toNumber()<=now.year){ // IF supported month < current month, skip
                     continue;
                 }
-                var days_keys = res[mo-1].keys();
+                var days_keys_str = res[mo-1].keys();
+                var days_keys = [];
+                for (var k =0; k < days_keys_str.size(); k++){
+                    days_keys.add(days_keys_str[k].toNumber());
+                }
                 days_keys.sort(null); 
                 for (var j = 0; j < days_keys.size(); j++) { // Loop inside days
 
                         var d_key = days_keys[j];
-                        if(d_key.toNumber()<now.day and mo<=now.month and y_key.toNumber()<=now.year){ // If supported day < current day, skip
+                        if(d_key<now.day and mo<=now.month and y_key.toNumber()<=now.year){ // If supported day < current day, skip
                             continue;
                         }
 
                         writeLog("GlanceView:onShow", "Now:"+now.year.toString()+"."+now.month.toString()+"."+now.day.toString(), 100);
                         writeLog("GlanceView:onShow", "Event at :"+(now.year+i).toString()+"."+mo.toString()+"."+d_key, 100);
                         
-                        days_untill =  Gregorian.moment({:year => now.year+i, :month => mo, :day => d_key.toNumber()}).subtract(Gregorian.moment({:year => now.year, :month => now.month, :day => now.day})).value()/Gregorian.SECONDS_PER_DAY;
-                        event = res[mo-1][d_key]; // Event found
+                        days_untill =  Gregorian.moment({:year => now.year+i, :month => mo, :day => d_key}).subtract(Gregorian.moment({:year => now.year, :month => now.month, :day => now.day})).value()/Gregorian.SECONDS_PER_DAY;
+                        event = res[mo-1][d_key.toString()]; // Event found
                         break;
                     
                 }

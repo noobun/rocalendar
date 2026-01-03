@@ -86,20 +86,14 @@ class OverviewDelegate extends WatchUi.BehaviorDelegate {
             month = month + 1;
             if(month > 12){
                 month = 1;
-                year++;
-                if(year>now_year+supported_years){
-                    year=now_year;
-                }
+                year = getRelativeYears(year, 1);
             }
         }
         if(code==13 || code==2){ // Up
             month = month - 1;
             if(month < 1){
                 month = 12;
-                year--;
-                if(year<now_year){
-                    year=now_year+supported_years;
-                }
+                year = getRelativeYears(year, -1);
             }
         }
 

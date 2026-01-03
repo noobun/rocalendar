@@ -36,6 +36,8 @@ class OverviewView extends WatchUi.View {
     var rootWidth as Number = 0; // Starting point for horizonal alligment
     var width as Number = 0; // Width of the calendar
 
+    var index_arr = [-5, 1, 0, -1, -2, -3, -4]; // Used to determine when week starts
+
     function initialize() {
         View.initialize();
 
@@ -92,7 +94,7 @@ class OverviewView extends WatchUi.View {
 
     function drawForeground(dc as Dc, month as Dictionary<String, Dictionary or String or Number>) as Void {
         var options = {
-            :year   => 2025,
+            :year   => selected_year,
             :month  => selected_mount,
             :day    => 1,
             :hour   => 0
@@ -103,8 +105,8 @@ class OverviewView extends WatchUi.View {
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        var index = 2-(Gregorian.info(date, Time.FORMAT_SHORT).day_of_week-1); // -1 for week start saturday, Force on negative if start day not monday
-        var last = getDaysInMonth(2025, selected_mount); // Last day or the month     
+        var index = index_arr[Gregorian.info(date, Time.FORMAT_SHORT).day_of_week-1]; // -1 for week start saturday, Force on negative if start day not monday
+        var last = getDaysInMonth(selected_year, selected_mount); // Last day or the month     
 
         dc.drawText(
             diameter/2,                      // gets the width of the device and divides by 2
