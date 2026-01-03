@@ -13,6 +13,7 @@ class MonthDelegate extends WatchUi.BehaviorDelegate {
 
     var db as Dictionary= Storage.getValue("db");
     var month as Number = Storage.getValue("now_month");
+    var year as Number = Storage.getValue("now_year");
 
     function initialize(manager) {
         BehaviorDelegate.initialize();

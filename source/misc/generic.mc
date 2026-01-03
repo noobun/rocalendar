@@ -9,6 +9,67 @@ import Toybox.Communications;
 import Toybox.Attention;
 using Toybox.Math;
 
+(:glance )
+function getSupportedYears(){
+    return {
+        "2025" => Rez.JsonData.year_2025,
+        "2026" => Rez.JsonData.year_2026
+    };
+}
+
+(:glance)
+function getRelativeYears(current as Number, direction as Number){
+    var sup_years = getSupportedYears().keys();
+    var years_array = [];
+    for (var i = 0; i < sup_years.size(); i++){
+        years_array.add(sup_years[i].toNumber());
+    }
+    years_array.sort(null);
+    var current_index = years_array.indexOf(current);
+    var next_index = current_index+direction;
+
+    //writeLog("generic:getRelativeYear", years_array.slice(next_index%years_array.size(), next_index%years_array.size()).toString(), 100);
+    //return years_array.slice(next_index%years_array.size(), next_index%years_array.size())[0];
+    return years_array[(next_index%years_array.size()).abs()];
+}
+
+var weekdayname = ["Lu", "Ma", "Mi", "Jo", "Vi", "Sm", "Du"];
+
+var monthname = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie",
+                "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];   
+
+(:glance )
+function getDaysInMonth(year as Number, month as Number) as Number {
+
+    // Create a moment for the 1st day of the current month
+    var start = Gregorian.moment({
+        :year  => year,
+        :month => month,
+        :day   => 1
+    });
+
+    // Create a moment for the 1st day of the next month
+    var nextStart;
+    if (month == 12) {
+        nextStart = Gregorian.moment({
+            :year  => year + 1,
+            :month => 1,
+            :day   => 1
+        });
+    } else {
+        nextStart = Gregorian.moment({
+            :year  => year,
+            :month => month + 1,
+            :day   => 1
+        });
+    }
+
+    // Duration between them in seconds
+    var diff = nextStart.subtract(start);
+
+    // Convert seconds → days
+    return diff.value() / Gregorian.SECONDS_PER_DAY;
+}
 
 (:glance )
 function vibrateAttention() {
@@ -25,26 +86,6 @@ function getDeadSpace(diameter, height) as Float {
     var tmp = Math.sqrt(Math.pow(radius, 2) - Math.pow(height, 2));
     return radius-tmp;
 }
-
-// (:glance )
-// function returnColorBasedOnString(color_str as String) as Graphics.ColorValue{
-//     if(color_str.equals("verde")){
-//         return Graphics.COLOR_GREEN;
-//     }else if(color_str.equals("rosu")){
-//         return Graphics.COLOR_RED;
-//     }else if(color_str.equals("galben")){
-//         return Graphics.COLOR_YELLOW;
-//     }else if(color_str.equals("albastru")){
-//         return Graphics.COLOR_BLUE;
-//     }else if(color_str.equals("alb")){
-//         return Graphics.COLOR_WHITE;
-//     }else if(color_str.equals("nimic")){
-//         return Graphics.COLOR_TRANSPARENT;
-//     }else{
-//         writeLog("returnColorBasedOnString", "Unknow render color", 100);
-//         return Graphics.COLOR_TRANSPARENT;
-//     }
-// }
 
 (:glance )
 function getNextEvent(now_day as Number, db as Array) as Array<Number or String>{

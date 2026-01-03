@@ -13,7 +13,8 @@ class MonthView extends WatchUi.View {
 
     var month_draw = new Rez.Drawables.month_draw();
 
-    var current_month;
+    var selected_mount;
+    var selected_year;
     var db = {};
 
     var scrolled_h;
@@ -34,23 +35,8 @@ class MonthView extends WatchUi.View {
 
     var eventList;
     var selected = 0;
-    
+    var selected_set = false;
     var canvas;
-
-    var main_res_dict = [
-            Rez.JsonData.main_ianuarie,
-            Rez.JsonData.main_februarie,
-            Rez.JsonData.main_martie,
-            Rez.JsonData.main_aprilie,
-            Rez.JsonData.main_mai,
-            Rez.JsonData.main_iunie,
-            Rez.JsonData.main_iulie,
-            Rez.JsonData.main_august,
-            Rez.JsonData.main_septembrie,
-            Rez.JsonData.main_octombrie,
-            Rez.JsonData.main_noiembrie,
-            Rez.JsonData.main_decembrie
-        ];
 
     function anim_finish() as Void{
         during_anim = false;
@@ -58,6 +44,7 @@ class MonthView extends WatchUi.View {
 
     function initialize(){
         View.initialize();
+        selected_set=false;
     }
 
     function drawBackground(dc as Dc) as Void {
@@ -67,10 +54,11 @@ class MonthView extends WatchUi.View {
     function onLayout(dc) as Void {
         setLayout(Rez.Layouts.view_month(dc));
 
-        current_month = Storage.getValue("current_month");
-        db = Application.loadResource(main_res_dict[current_month-1]);
+        selected_mount = Storage.getValue("selected_mount");
+        selected_year = Storage.getValue("selected_year");
+        db=Application.loadResource(getSupportedYears()[selected_year.toString()])[selected_mount-1];
 
-        drawMonth = new DrawMonth (db, dc);
+        drawMonth = new DrawMonth (dc);
         render_h = drawMonth.local_h;
 
         diameter = dc.getHeight(); // Diameter of the screen, round only
@@ -84,8 +72,6 @@ class MonthView extends WatchUi.View {
         width = Math.round(diameter*3/5); // Width of the calendar
 
         scrolled_h = Math.round(diameter/3+1); //- font_h_TINY/2;
-        
-        current_month = Storage.getValue("current_month");
 
         writeLog("MonthView:onLayout", "Executed...", 100);
     }
@@ -94,7 +80,7 @@ class MonthView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
-        writeLog("MonthView:onShow", "Current Working Month NR:"+current_month.toString(), 100);
+        writeLog("MonthView:onShow", "Current Working Month NR:"+selected_mount.toString(), 100);
         writeLog("MonthView:onShow", "Current Working Month:"+db, 100);
     }
 
@@ -107,7 +93,7 @@ class MonthView extends WatchUi.View {
         writeLog("font_h_SMALL:", font_h_SMALL, 100);
 
         if(drawMonth==null){
-            drawMonth = new DrawMonth (db, dc);
+            drawMonth = new DrawMonth (dc);
             render_h = drawMonth.local_h;
         }
 
@@ -115,14 +101,32 @@ class MonthView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(0, rootHight - font_h_SMALL, diameter, rootHight - font_h_SMALL);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-		dc.drawText(diameter/2, rootHight-2*font_h_SMALL, Graphics.FONT_SYSTEM_SMALL, db["month"], Graphics.TEXT_JUSTIFY_CENTER);
-    
+		dc.drawText(diameter/2, rootHight-2*font_h_SMALL, Graphics.FONT_SYSTEM_SMALL, monthname[selected_mount-1], Graphics.TEXT_JUSTIFY_CENTER);
+    	dc.drawText(diameter/2, rootHight-3*font_h_SMALL, Graphics.FONT_XTINY, selected_year.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+
+
         dc.setClip(0, Math.round(rootHight - font_h_SMALL), diameter, diameter);
 
-        eventList = drawMonth.drawData(dc);
+        eventList = drawMonth.drawData(selected_year, selected_mount, db, dc);
+
+        dc.clearClip();
+        if(!selected_set and selected_year == Storage.getValue("now_year") and selected_mount == Storage.getValue("now_month")){
+            writeLog("MonthView:onUpdate", "Auto scroll enabled, move to next event", 100);
+            for(var day=1; day<= getDaysInMonth(selected_year, selected_mount); day+=1){
+                if(db.hasKey(day.toString())==true){
+                    scroll(-1);
+                    if(day >= Storage.getValue("now_day")){
+                        selected_set=true;
+                        break;
+                    }
+                }
+            }
+            selected_set=true;
+        }
+
         writeLog("MonthView:onUpdate:eventList", eventList, 100);
         writeLog("MonthView:onUpdate", "executed", 100);
-        dc.clearClip();
+        
     }
 
     // Called when this View is removed from the screen. Save the
@@ -134,7 +138,7 @@ class MonthView extends WatchUi.View {
         drawMonth = null;
     }
 
-    public function scroll(direction as Number) as Void {
+    public function scroll(direction as Number) as Number {
         // direction 1 -> Down, -1 -> Up
         if((drawMonth.local_h >= rootHight - font_h_SMALL && direction == 1 ) || (direction == -1 && scrolled_h <= drawMonth.abs_h * -1 + diameter/2 + drawMonth.itemH)){
             writeLog("MonthView:scroll", "Stop Scroll due to max placement", 10);
@@ -149,6 +153,8 @@ class MonthView extends WatchUi.View {
         }
         writeLog("MonthView:scroll", "Selected Event:"+selected, 100);
         writeLog("MonthView:scroll", "scrolled_h: "+scrolled_h.toString()+"| local_h: "+drawMonth.abs_h+" | delta: "+(drawMonth.local_h * -1 + 150).toString(), 10);
+
+        return selected;
     }
 
     function getCurrentEvent() as Lang.String {
@@ -167,9 +173,12 @@ class MonthView extends WatchUi.View {
 // Done as a class so it can be animated.
 class DrawMonth extends WatchUi.Drawable
 {		
-    var month_data;   
+    var db;   
     var local_h; 
     var abs_h;
+
+    var selected_year;
+    var selected_mount;
 
     var free_day_color;
     var black_cross_color;
@@ -181,7 +190,7 @@ class DrawMonth extends WatchUi.Drawable
     var font_h_TINY; // H or the Tiny font
     var itemH;
 
-	function initialize (month_data_inner, dc)
+	function initialize (dc)
 	{
         abs_h = 0;
 
@@ -192,7 +201,7 @@ class DrawMonth extends WatchUi.Drawable
         itemH = Math.round(1.2 * font_h_TINY + font_h_XTINY);
         
         local_h = diameter/2-itemH/2;
-        month_data = month_data_inner;
+        db = db;
 
         writeLog("MonthView:DrawMonth", "Initialize", 100);
         
@@ -201,9 +210,11 @@ class DrawMonth extends WatchUi.Drawable
         red_cross_color = Properties.getValue("red_cross_color") as Number;
     }
 	
-	function drawData (dc) as Array
+	function drawData (year, month, db, dc) as Array
 	{
-		var weeknr = month_data["nr_weeks"];
+        selected_year = year;
+        selected_mount = month;
+
         var eventList = [];
 
         writeLog("MonthView:draw", local_h, 100);
@@ -216,15 +227,13 @@ class DrawMonth extends WatchUi.Drawable
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(5, Math.round(dc.getHeight()/2-0.4*itemH), 5, Math.round(dc.getHeight()/2+0.4*itemH));
 
-        for(var week_pass=1; week_pass<=weeknr; week_pass+=1){
-            var week_days = month_data["weeks"][week_pass.toString()]["end"];
-            for(var day=1; day<= week_days; day+=1){
-                if(month_data["weeks"][week_pass.toString()]["days"].hasKey(day.toString())==true){
-                    var event = month_data["weeks"][week_pass.toString()]["days"][day.toString()];
-                    render_h = drawEventItem(dc, render_h, event, day);
-                    eventList.add(event["name"]);
-                    items += 1;
-                }
+
+        for(var day=1; day<= getDaysInMonth(selected_year, selected_mount); day+=1){
+            if(db.hasKey(day.toString())==true){
+                var event = db[day.toString()];
+                render_h = drawEventItem(dc, render_h, event, day);
+                eventList.add(event["name"]);
+                items += 1;
             }
         }
 
@@ -240,17 +249,20 @@ class DrawMonth extends WatchUi.Drawable
 	// highlight is the selected menu item that can optionally show a value.
 	function drawEventItem (dc, render_h, event, day) as Number
 	{
-        if("black".equals(event["cross"])){
+        var free  = event["opt"].substring(0, 1);
+        var color  = event["opt"].substring(1, 2);
+
+        if("b".equals(color)){
             dc.setColor(black_cross_color, Graphics.COLOR_TRANSPARENT);
             dc.fillCircle(diameter/20*4, render_h+itemH*1/4, itemH/5/2);
         }
 
-        if(event["free"]==true){
+        if("t".equals(free)){
             dc.setColor(free_day_color, Graphics.COLOR_TRANSPARENT);
             dc.fillCircle(diameter/20*4, render_h+itemH*2/4, itemH/5/2);
         }
 
-        if("red".equals(event["cross"])){
+        if("r".equals(color)){
             dc.setColor(red_cross_color, Graphics.COLOR_TRANSPARENT);
             dc.fillCircle(diameter/20*4, render_h+itemH*3/4, itemH/5/2);
         }

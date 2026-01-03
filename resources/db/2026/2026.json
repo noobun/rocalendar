@@ -8,7 +8,7 @@
         "2": {
             "name": "A doua zi de anul nou",
             "desc": "",
-            "opt": "tn"
+            "opt": "fn"
         },
         "6": {
             "name": "(†) Boboteaza",
@@ -23,17 +23,17 @@
         "11": {
             "name": "† Sf. Cv. Teodosie",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
         "17": {
             "name": "†) Sf. Cv. Antonie",
             "desc": "cel mare",
-            "opt": "tb"
+            "opt": "fb"
         },
         "18": {
             "name": "† Sf. Ier. Atanasie",
             "desc": "si Chiril",
-            "opt": "tb"
+            "opt": "fb"
         },
         "20": {
             "name": "†) Sf. Cuv. Eftimie",
@@ -48,7 +48,12 @@
         "25": {
             "name": "†) Sf. Ier. Grigorie",
             "desc": "Teologul",
-            "opt": "tb"
+            "opt": "fb"
+        },
+        "26": {
+            "name": "†) Sf. Ier. Iosic",
+            "desc": "cel Milostiv",
+            "opt": "fb"
         },
         "27": {
             "name": "†  Aducerea moaștelor",
@@ -70,19 +75,19 @@
         "10": {
             "name": "†) Sf. Mc. Haralambie",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
         "24": {
             "name": "† Întâia și a doua",
             "desc": "aflare a Capului Sf. Ioan",
-            "opt": "tb"
+            "opt": "fb"
         }
     },
     {
         "9": {
             "name": "† Sf. 40 de Mc.",
             "desc": "din Sevastia",
-            "opt": "fr"
+            "opt": "fb"
         },
         "25": {
             "name": "(†) Buna Vestire",
@@ -91,34 +96,39 @@
         }
     },
     {
-        "18": {
+        "5": {
+            "name": "(†) Intrarea Domnilui",
+            "desc": "in Ierusalim",
+            "opt": "fr"
+        },
+        "10": {
             "name": "Vinerea Mare",
             "desc": "",
             "opt": "tn"
         },
-        "20": {
+        "12": {
             "name": "(†) Invierea Domnului",
             "desc": "",
             "opt": "tr"
         },
-        "21": {
+        "13": {
             "name": "(†) A doua zi de pasti",
             "desc": "",
             "opt": "tr"
         },
-        "22": {
+        "14": {
             "name": "(†) A treia zi de pasti",
             "desc": "Drumul spre Emaus",
+            "opt": "fr"
+        },
+        "17": {
+            "name": "†) Izvorul Tamaduirii",
+            "desc": "",
             "opt": "fr"
         },
         "23": {
             "name": "†) Sf. M. Mc. Gheorghe",
             "desc": "Purtator de biruinta",
-            "opt": "fr"
-        },
-        "25": {
-            "name": "†) Izvorul Tamaduirii",
-            "desc": "",
             "opt": "fr"
         }
     },
@@ -131,7 +141,7 @@
         "8": {
             "name": "†) Sf. Ap. Ioan",
             "desc": "Teologul",
-            "opt": "tb"
+            "opt": "fb"
         },
         "21": {
             "name": "†) Sf. Imp. Constantin",
@@ -143,26 +153,16 @@
             "desc": "a capului Sf. Ioan",
             "opt": "fr"
         },
-        "29": {
-            "name": "(†) Înălțarea Domnului",
-            "desc": "",
-            "opt": "fr"
+        "31": {
+            "name": "(†) Pogorarea Sf. Duh",
+            "desc": "A doua zi Rusalii",
+            "opt": "tr"
         }
     },
     {
         "1": {
             "name": "Ziua Copilului",
-            "desc": "Sarbatoare legala",
-            "opt": "tn"
-        },
-        "8": {
-            "name": "(†) Pogorarea Sf. Duh",
-            "desc": "Rusalii",
-            "opt": "tr"
-        },
-        "9": {
-            "name": "(†) Sf. Treime",
-            "desc": "A doua zi Rusalii",
+            "desc": "(†) Sf. Treime",
             "opt": "tr"
         },
         "24": {
@@ -173,24 +173,24 @@
         "29": {
             "name": "(†) Sf. Ap. Petru si Pavel",
             "desc": "†",
-            "opt": "tr"
+            "opt": "fr"
         },
         "30": {
             "name": "† Soborul Sf. 12 Ap.",
             "desc": "de la Ramet",
-            "opt": "tb"
+            "opt": "fb"
         }
     },
     {
         "5": {
             "name": "† Sf. Cuv. Atanasie",
             "desc": "Atonitul",
-            "opt": "tb"
+            "opt": "fb"
         },
         "7": {
             "name": "†) Sf. M. Mc. Chiriachi",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
         "20": {
             "name": "†) Sf. Slăvitul",
@@ -224,7 +224,7 @@
         "1": {
             "name": "† Inceputul anului",
             "desc": "bisericesc",
-            "opt": "tb"
+            "opt": "fb"
         },
         "8": {
             "name": "(†) Nasterea Maicii",
@@ -239,7 +239,7 @@
         "26": {
             "name": "†) Mutarea Sf. Ap.",
             "desc": "și Ev. Ioan",
-            "opt": "tb"
+            "opt": "fb"
         },
         "28": {
             "name": "† Sf. Cuv. Hariton Mărt",
@@ -252,6 +252,11 @@
             "name": "(†) Acoperamantul Maicii",
             "desc": "Domnului",
             "opt": "fr"
+        },
+        "7": {
+            "name": "(†) Sf. M. Mc. Serghei",
+            "desc": "Domnului",
+            "opt": "fb"
         },
         "14": {
             "name": "†) Sf. Cv. Parascheva",
@@ -283,17 +288,17 @@
         "11": {
             "name": "† Sf. M. Mc. Mina",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
         "13": {
             "name": "†) Sf. Ier. Ioan",
             "desc": "Gură de Aur",
-            "opt": "tb"
+            "opt": "fb"
         },
         "14": {
             "name": "† Sf. Ap. Filip",
             "desc": "unul dintre cei 12 Apostoli",
-            "opt": "tb"
+            "opt": "fb"
         },
         "21": {
             "name": "(†) Intrarea in Biserica",
@@ -312,15 +317,15 @@
             "desc": "a Romaniei",
             "opt": "tn"
         },
-        "2": {
+        "4": {
             "name": "† Sf. M. Mc. Varvara",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
-        "3": {
+        "5": {
             "name": "†) Sf. Cuv. Sava",
             "desc": "cel Sfințit",
-            "opt": "tb"
+            "opt": "fb"
         },
         "6": {
             "name": "†) Sf. Ier. Nicolae",
@@ -330,7 +335,7 @@
         "12": {
             "name": "†) Sf. Ier. Spiridon",
             "desc": "",
-            "opt": "tb"
+            "opt": "fb"
         },
         "25": {
             "name": "(†) Nasterea Domnului",

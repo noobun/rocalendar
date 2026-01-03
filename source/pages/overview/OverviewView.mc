@@ -6,6 +6,8 @@ import Toybox.Lang;
 import Toybox.Application;
 import Toybox.System;
 import Toybox.Communications;
+using Toybox.Time.Gregorian;
+using Toybox.Time;
 
 class OverviewView extends WatchUi.View {
 
@@ -13,9 +15,12 @@ class OverviewView extends WatchUi.View {
 
     var db as Dictionary = {};
     var now_month = Storage.getValue("now_month") as Number;
-    var current_month = now_month;
+    var now_year = Storage.getValue("now_year") as Number;
     var now_day = Storage.getValue("now_day") as Number;
-    var current_day = now_day;
+
+    var selected_mount = now_month;
+    var selected_year = now_year;
+    var selected_day = now_day;
 
     var free_day_color as Number = 0;
     var black_cross_color as Number = 0;
@@ -31,20 +36,7 @@ class OverviewView extends WatchUi.View {
     var rootWidth as Number = 0; // Starting point for horizonal alligment
     var width as Number = 0; // Width of the calendar
 
-    var main_res_dict = [
-            Rez.JsonData.main_ianuarie,
-            Rez.JsonData.main_februarie,
-            Rez.JsonData.main_martie,
-            Rez.JsonData.main_aprilie,
-            Rez.JsonData.main_mai,
-            Rez.JsonData.main_iunie,
-            Rez.JsonData.main_iulie,
-            Rez.JsonData.main_august,
-            Rez.JsonData.main_septembrie,
-            Rez.JsonData.main_octombrie,
-            Rez.JsonData.main_noiembrie,
-            Rez.JsonData.main_decembrie
-        ];
+    var index_arr = [-5, 1, 0, -1, -2, -3, -4]; // Used to determine when week starts
 
     function initialize() {
         View.initialize();
@@ -59,7 +51,7 @@ class OverviewView extends WatchUi.View {
         setLayout(Rez.Layouts.view_overview(dc));
 
         // _month = findDrawableById("month") as WatchUi.Text;
-        // _month.setText(db[current_month-1]["month"]);
+        // _month.setText(db[selected_mount-1]["month"]);
 
         diameter = dc.getHeight(); // Diameter of the screen, round only
         font_h_XTINY = dc.getFontHeight(Graphics.FONT_XTINY); // H of the TINY font
@@ -76,7 +68,7 @@ class OverviewView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
-        db=Application.loadResource(main_res_dict[current_month-1]);
+        db=Application.loadResource(getSupportedYears()[selected_year.toString()]);
 
         free_day_color = Properties.getValue("free_day_color") as Number;
         black_cross_color = Properties.getValue("black_cross_color") as Number;
@@ -88,28 +80,45 @@ class OverviewView extends WatchUi.View {
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(deadSpace, rootHight+font_h_XTINY, (diameter-deadSpace)*0.9, rootHight+font_h_XTINY);
+        
+        dc.drawText(
+            diameter/2,                      // gets the width of the device and divides by 2
+            0.90*diameter,                     // gets the height of the device and divides by 2
+            Graphics.FONT_XTINY,                    // sets the font size
+            selected_year.toString(),                          // the String to display TODO: Use name not index
+            Graphics.TEXT_JUSTIFY_CENTER            // sets the justification for the text
+        );
+        
         overview_draw.draw( dc );
     }
 
     function drawForeground(dc as Dc, month as Dictionary<String, Dictionary or String or Number>) as Void {
+        var options = {
+            :year   => selected_year,
+            :month  => selected_mount,
+            :day    => 1,
+            :hour   => 0
+        };
+        var date = Gregorian.moment(options);
+        writeLog("OverviewDelegate:eventHandling", "First day in mount:"+Gregorian.info(date, Time.FORMAT_SHORT).day_of_week, 100);
+        writeLog("OverviewView:onUpdate", "End day in mount:"+getDaysInMonth(2025, selected_mount).toString(), 100);
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        var index = 2-month["weeks"]["1"]["start_day_index"]; // Force on negative if start day not monday
-        var last = month["last"]; // Last day or the month
-
+        var index = index_arr[Gregorian.info(date, Time.FORMAT_SHORT).day_of_week-1]; // -1 for week start saturday, Force on negative if start day not monday
+        var last = getDaysInMonth(selected_year, selected_mount); // Last day or the month     
 
         dc.drawText(
             diameter/2,                      // gets the width of the device and divides by 2
             0.03*diameter,                     // gets the height of the device and divides by 2
             Graphics.FONT_XTINY,                    // sets the font size
-            month["month"],                          // the String to display
+            monthname[selected_mount-1],                          // the String to display TODO: Use name not index
             Graphics.TEXT_JUSTIFY_CENTER            // sets the justification for the text
         );
 
         //////////////////////////
         // Draw week days 
         //////////////////////////
-        var weekdayname = ["Lu", "Ma", "Mi", "Jo", "Vi", "Sm", "Du"];
 
         for (var i = 1; i <= 7; i += 1){
             dc.drawText(
@@ -125,6 +134,7 @@ class OverviewView extends WatchUi.View {
         // Draw dates
         //////////////////////////
         var weeks_nr = 1;
+        var day_nr = 0;
         for (var i = 1; i <= 6; i += 1){ // Weeks
             for (var j = 0; j <= 6; j+=1){ // Days
 
@@ -132,7 +142,8 @@ class OverviewView extends WatchUi.View {
                     index += 1;
                     continue;
                 }
-
+                day_nr++;
+                //writeLog("OverviewView:drawForeground", "Idenx day:"+day_nr.toString(), 100);
                 // Set Color for Day
                 if((j+1)%6==0){
                     dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
@@ -153,18 +164,21 @@ class OverviewView extends WatchUi.View {
                 // Determine of an event exists in the current drawing day
                 var mark_radius = font_h_XTINY/5;
                 var mark_diameter = mark_radius * 2;
-                if(month["weeks"][weeks_nr.toString()]["days"].hasKey(index.toString())==true){
-                    if("black".equals(month["weeks"][weeks_nr.toString()]["days"][index.toString()]["cross"])){
+                if(month.hasKey(day_nr.toString())==true){
+                    var free  = month[day_nr.toString()]["opt"].substring(0, 1);
+                    var color  = month[day_nr.toString()]["opt"].substring(1, 2);
+
+                    if("b".equals(color)){
                         dc.setColor(black_cross_color, Graphics.COLOR_TRANSPARENT);
                         dc.fillCircle(rootWidth + j * width/6 + font_h_XTINY/2 - mark_diameter, rootHight + i * hight/6 + 1.1*font_h_XTINY, mark_radius);
                     }
 
-                    if(month["weeks"][weeks_nr.toString()]["days"][index.toString()]["free"]==true){
+                    if("t".equals(free)){
                         dc.setColor(free_day_color, Graphics.COLOR_TRANSPARENT);
                         dc.fillCircle(rootWidth + j * width/6 + font_h_XTINY/2, rootHight + i * hight/6 + 1.1*font_h_XTINY, mark_radius);
                     }
 
-                    if("red".equals(month["weeks"][weeks_nr.toString()]["days"][index.toString()]["cross"])){
+                    if("r".equals(color)){
                         dc.setColor(red_cross_color, Graphics.COLOR_TRANSPARENT);
                         dc.fillCircle(rootWidth + j * width/6 + font_h_XTINY/2 + mark_diameter, rootHight + i * hight/6 + 1.1*font_h_XTINY, mark_radius);
                     }
@@ -173,7 +187,7 @@ class OverviewView extends WatchUi.View {
                 ///////////////////////////////
                 // Draw circle for current day
                 ///////////////////////////////
-                if(now_month == current_month && now_day == index){
+                if(now_month == selected_mount && now_day == index){
                     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
                     dc.setPenWidth(3);
                     dc.drawArc(rootWidth + j * width/6 + font_h_XTINY/2, 
@@ -200,10 +214,9 @@ class OverviewView extends WatchUi.View {
     // Update the view
     function onUpdate(dc as Dc) as Void {
         // Call the parent onUpdate function to redraw the layout
-        Storage.setValue("current_month", current_month);
-        db=Application.loadResource(main_res_dict[current_month-1]);
-
-        writeLog("OverviewView:onUpdate", db["month"]+" loaded.", 100);
+        //Storage.setValue("selected_mount", selected_mount); // Done in delegate
+        
+        db=Application.loadResource(getSupportedYears()[selected_year.toString()])[selected_mount-1];
 
         View.onUpdate(dc);
         drawBackground(dc);
@@ -217,8 +230,9 @@ class OverviewView extends WatchUi.View {
         db = {};
     }
 
-    function onDataReceived(data) as Lang.Boolean {
-        current_month = data;
+    function onDataReceived(month, year) as Lang.Boolean {
+        selected_mount = month;
+        selected_year = year;
         WatchUi.requestUpdate();
         return true;
     }

@@ -1,9 +1,10 @@
 <img src=resources/misc/hero_image.png width="100%">
 
-# ROcalendar 2025
 
-> [!IMPORTANT] 
-> This works only for the 2025 year
+[![ro](https://img.shields.io/badge/lang-ro-red.svg)](README.ro.md)
+
+
+# ROcalendar
 
 ROcalendar is an app made for garmin watches (with 5 buttons). 
 
@@ -11,7 +12,7 @@ This will display all the events that are part of the Cristian Ortodox Calendar 
 
 The app supports 3 event types:
 * Public Holidays
-* Blue Cross Cristian Ortodox
+* Red Cross Cristian Ortodox
 * Black Cross Cristian Ortodox
 
 > [!TIP] 
@@ -20,9 +21,7 @@ The app supports 3 event types:
 # Implementation
 
 ### Database
-Due to limitations for Connect IQ and memory on device the database needs to be splitted in 2 -> Main one and Glance one
-
-Database consists in a json file for Main and 12 json for glance
+Each year has his own json file inside resources/db/[YEAR]
 
 ### Month View
 
@@ -52,7 +51,6 @@ Menu View -> Where you can set colors for each event type
 
 # Improvements that could be done
 
-* Multi-Year
 * More details on event
 * Notifications/Alerts
 
